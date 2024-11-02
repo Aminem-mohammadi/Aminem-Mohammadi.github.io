@@ -33,6 +33,14 @@ body {
     text-align: right;
 }
 
+.navbar h1 {
+    float: left;
+    font-size: 1.5em; /* Adjust font size as necessary */
+}
+.navbar ul {
+    float: right;
+}
+
 .navbar ul li {
     display: inline;
     margin-right: 10px;
