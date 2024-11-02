@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +19,7 @@ body {
     max-width: 1100px;
 }
 
+/* Navbar */
 .navbar {
     background: #333;
     color: #fff;
@@ -28,52 +30,9 @@ body {
     z-index: 1000;
 }
 
-
-/* Flex container for main content and sidebar */
-.flex-container {
-    display: flex;
-    gap: 20px;
-}
-
-.main-content {
-    flex: 3; /* Main content takes up more space */
-}
-
-.profile-sidebar {
-    flex: 1; /* Sidebar takes up less space */
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.profile-picture {
-    width: 100%;
-    max-width: 150px; /* Limit max width for larger screens */
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-/* Responsive adjustment for mobile */
-@media (max-width: 768px) {
-    .flex-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 .navbar ul {
     list-style: none;
     text-align: right;
-}
-
-.navbar h1 {
-    float: left;
-    font-size: 1.5em; /* Adjust font size as necessary */
-}
-.navbar ul {
-    float: right;
 }
 
 .navbar ul li {
@@ -87,26 +46,42 @@ body {
     padding: 5px 10px;
 }
 
-section {
-    padding: 60px 0;
+/* Main Section and Sidebar Layout */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 80px; /* Add some padding for navbar overlap */
 }
 
+.main-content {
+    flex: 3;
+}
+
+.profile-sidebar {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-picture {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Section Titles */
 section h2 {
     font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
+/* Buttons */
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -118,4 +93,22 @@ footer {
 
 .button:hover {
     background-color: #005bb5;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
 }
