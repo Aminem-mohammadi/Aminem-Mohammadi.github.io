@@ -15,7 +15,7 @@ body {
 
 /* Left Sidebar */
 .left-sidebar {
-    width: 300px;
+    width: 250px; /* Approximate width to one square of the right column */
     background-color: #f4f4f4;
     padding: 20px;
     position: fixed;
@@ -57,9 +57,9 @@ h2 {
 
 /* Main Content Area */
 .main-content {
-    margin-left: 300px;
+    margin-left: 250px; /* Same width as left-sidebar */
     padding: 20px;
-    width: calc(100% - 300px);
+    width: calc(100% - 250px);
 }
 
 .navbar {
