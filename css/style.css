@@ -7,32 +7,73 @@
 }
 
 body {
-    line-height: 1.6;
+    display: flex;
+    min-height: 100vh;
     color: #333;
     font-size: 16px;
 }
 
-.container {
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-    max-width: 1100px;
+/* Left Sidebar */
+.left-sidebar {
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar */
+.profile-content {
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+
+.profile-picture {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #0073e6;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 300px;
+    padding: 20px;
+    width: calc(100% - 300px);
+}
+
 .navbar {
     background: #333;
     color: #fff;
     padding: 15px;
-    position: fixed;
+    text-align: right;
+    position: sticky;
     top: 0;
-    width: 100%;
     z-index: 1000;
 }
 
 .navbar ul {
     list-style: none;
-    text-align: right;
 }
 
 .navbar ul li {
@@ -46,53 +87,15 @@ body {
     padding: 5px 10px;
 }
 
-/* Main Section and Sidebar Layout */
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding-top: 80px; /* Add some padding for navbar overlap */
+/* Sections */
+section {
+    padding: 60px 0;
 }
 
-.main-content {
-    flex: 3;
-}
-
-.profile-sidebar {
-    flex: 1;
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.profile-picture {
-    width: 100%;
-    max-width: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-/* Section Titles */
 section h2 {
     font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
-}
-
-/* Buttons */
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    background-color: #0073e6;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: #005bb5;
 }
 
 /* Footer */
@@ -101,14 +104,23 @@ footer {
     color: #fff;
     text-align: center;
     padding: 15px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-top: 50px;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .flex-container {
+    body {
         flex-direction: column;
+    }
+    
+    .left-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
     }
 }
