@@ -28,6 +28,41 @@ body {
     z-index: 1000;
 }
 
+
+/* Flex container for main content and sidebar */
+.flex-container {
+    display: flex;
+    gap: 20px;
+}
+
+.main-content {
+    flex: 3; /* Main content takes up more space */
+}
+
+.profile-sidebar {
+    flex: 1; /* Sidebar takes up less space */
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-picture {
+    width: 100%;
+    max-width: 150px; /* Limit max width for larger screens */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .navbar ul {
     list-style: none;
     text-align: right;
